@@ -1,0 +1,628 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #080808;
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background: rgba(0, 0, 0, 0.368);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 5;
+  padding: 2rem;
+}
+
+.logo {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+.logo span {
+  text-shadow: 0 0 25px #00ffee;
+}
+
+.navbar {
+  display: flex;
+  gap: 2vh;
+}
+
+.navbar a {
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+  transition: 0.3 ease;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  color: #00ffee;
+  border-bottom: 3px solid #00ffee;
+}
+
+#menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+/* Designing home page lay out */
+
+.home {
+  display: flex;
+  width: 105vw;
+  height: 60vw;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 14rem;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Home content and buttons */
+.home-content {
+  text-align: center;
+  justify-content: center;
+}
+
+span {
+  color: #00ffee;
+}
+
+.logo span {
+  color: #00ffee;
+}
+.home-content h4 {
+  font-size: 5rem;
+}
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.homeimage img {
+  border-radius: 50%;
+  box-shadow: 0 0 25px #00ffee;
+  object-fit: cover;
+  object-position: center;
+  height: 50vh;
+  width: 50vh;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.homeimage img:hover {
+  box-shadow: 0 0 25px #00ffee, 0 0 50px #00ffee, 0 0 100px #00ffee;
+}
+
+.home-content p {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+  max-width: 600px;
+}
+/* social buttons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: 2px solid #00ffee;
+  color: #00ffee;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.socials a:hover {
+  color: #00ffee;
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 0 25 #00ffee;
+  background-color: #00ffee;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: white;
+  box-shadow: 0 0 25px white;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: black;
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 0 15px;
+}
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #00ffee;
+}
+.button-group {
+  align-items: center;
+  gap: 200px;
+}
+
+.button-group a:nth-of-type(2) {
+  background-color: black;
+  color: #00ffee;
+  border: 2px solid #00ffee;
+  box-shadow: 0 0 25px #00ffee;
+}
+.button-group a:nth-of-type(2):hover {
+  box-shadow: 0 0 25px #00ffee;
+  background-color: #00ffee;
+  color: black;
+}
+
+/* About me section */
+
+/* Heading */
+
+.About {
+  display: flex;
+  height: 30vw;
+  width: 105vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.aboutme-header {
+  display: block;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.aboutme-header p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+/* About me lay out */
+.aboutme-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  width: 80%;
+}
+
+/* my background */
+.my-background {
+  width: 50%;
+  height: 30%;
+}
+
+.my-background h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+}
+
+.my-background p {
+  font-size: 2rem;
+  margin-top: 4rem;
+  text-align: left;
+  width: 50%;
+}
+
+/* skillset section */
+.myskills {
+  width: 30%;
+  text-align: center;
+}
+
+.skillset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.myskills h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.skillset p {
+  background-color: #ffffff;
+  color: #080808;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Project part */
+/* Section Styling */
+#Projects {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.Projects {
+  margin-top: 20rem;
+  width: 105vw;
+  height: 60vw;
+}
+
+.project_p {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.projecttitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Horizontal Scrolling Container */
+.project_info_container {
+  display: flex;
+  overflow-x: auto;
+  gap: 8rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding-bottom: 2rem;
+}
+/* scroll bar settings */
+.project_info_container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.project_info_container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.project_info_container::-webkit-scrollbar-thumb {
+  background: #00ffee;
+  border-radius: 10px;
+  border: 2px solid #080808;
+}
+
+/* Individual Project Styling */
+.detailcontainer {
+  min-width: 300px;
+  flex: 0 0 auto;
+  background-color: #060606;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projectcontainer img {
+  width: 60%;
+  height: 45rem;
+  width: auto;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.projectbutton {
+  background-color: #140606;
+  color: rgb(255, 255, 255);
+  border: 1px solid;
+  border-color: #00ffee;
+  border-width: 0.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.4rem;
+  transition: background-color 0.3s;
+}
+
+.projectbutton:hover {
+  background-color: #ffffff;
+  color: #060606;
+}
+
+/* Contact section */
+#ContactMe {
+  padding: 2rem 0;
+  text-align: center;
+  width: 105vw;
+  height: 35vw;
+}
+
+.contactmetext {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contactmetext p {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.contactmetext h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.info-ccontainer {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  background-color: #ede2e201;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+  display: flex;
+  border-radius: 5rem;
+  border: cyan 0.1rem solid;
+  border-width: 0.2rem;
+  margin: 2rem auto;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.info-ccontainer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.info-ccontainer p,
+.info-ccontainer a {
+  color: white;
+  font-size: 3rem;
+  margin: 0 2rem 0 0;
+  text-decoration: none;
+}
+
+.info-ccontainer a i {
+  font-size: 3rem;
+  color: white;
+}
+/* Icons styling */
+.contacticon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: 2px solid #00ffee;
+  color: #47d5d5;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* Footer container should stick at the bottom */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: transparent; /* Optional: Add a background color */
+}
+
+.footer a {
+  font-size: 2rem;
+  color: white;
+  margin-left: 30px;
+  font-weight: 900;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: #00ffee;
+  border-bottom: 3px solid #00ffee;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Base Styles (for large desktops/laptops) */
+/* Your current styles apply here (what you shared is for larger screens). */
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 1154px) {
+  .About {
+    margin-top: 10rem;
+    gap: 8rem;
+  }
+  .aboutme-container {
+    width: 100%;
+  }
+
+  .Contactme {
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 1310px) {
+  .About {
+    margin-top: 10rem;
+    gap: 8rem;
+  }
+  .aboutme-container {
+    width: 100%;
+  }
+
+  .Contactme {
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+  }
+}
+@media (max-width: 1080px) {
+  .About {
+    margin-top: 20rem;
+    gap: 8rem;
+  }
+  .aboutme-container {
+    width: 100%;
+  }
+
+  .Contactme {
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+  }
+}
+@media (max-width: 980px) {
+  .home {
+    margin-top: 35rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home img {
+    max-width: 60rem;
+    max-height: 60rem;
+  }
+
+  .About {
+    margin-top: 50rem;
+  }
+
+  .Projects {
+    margin-top: 30rem;
+  }
+
+  .Contactme {
+    margin-top: 30rem;
+    margin-bottom: 20rem;
+  }
+}
+
+/* Small Tablets (576px to 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    gap: 1.5rem;
+  }
+  .navbar {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .home-content h4 {
+    font-size: 4rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .homeimage img {
+    height: 50vh;
+    width: 50vh;
+  }
+
+  .About {
+    min-width: 80vw;
+    min-height: 70vw;
+  }
+
+  .aboutme-header {
+    font-size: 2.5rem;
+  }
+
+  .skillset p {
+    font-size: 1.4rem;
+  }
+}
+
+.contactmetext h1 {
+  font-size: 3rem;
+}
+.aboutme-container {
+  margin-left: 0;
+  gap: 1rem;
+}
